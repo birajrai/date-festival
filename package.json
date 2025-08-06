@@ -1,16 +1,17 @@
 {
-  "name": "nepali-date-api",
-  "version": "1.0.0",
-  "description": "Public Nepali Date JSON API updated every 2 hours",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "generate": "node generator.js"
-  },
-  "dependencies": {
-    "axios": "^1.6.7",
-    "dayjs": "^1.11.10",
-    "express": "^4.19.2",
-    "nepali-datetime": "^1.4.1"
-  }
+    "name": "nepali-date-api",
+    "version": "1.0.0",
+    "description": "Public Nepali Date JSON API updated every 2 hours",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "generate": "node generator.js",
+        "uptime": "node uptime-check.js"
+    },
+    "dependencies": {
+        "axios": "^1.6.7",
+        "dayjs": "^1.11.10",
+        "express": "^4.19.2",
+        "nepali-datetime": "^1.4.1"
+    }
 }
