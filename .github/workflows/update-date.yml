@@ -2,8 +2,7 @@ name: Update Nepali Date
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # every 2 hours
-  workflow_dispatch:
+    - cron: '0 */2 * * *' # Every 2 hours
 
 jobs:
   build:
@@ -12,7 +11,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -20,13 +19,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run script
-        run: node index.js
+      - name: Generate updated date.json
+        run: npm run generate
 
-      - name: Commit and push changes
+      - name: Commit and push
         run: |
-          git config --global user.name "Nepali Date Bot"
+          git config --global user.name "Nepali Date API"
           git config --global user.email "actions@github.com"
           git add date.json
-          git commit -m "⏰ Update Nepali date [skip ci]" || echo "No changes to commit"
+          git commit -m "🗓️ Update Nepali date [skip ci]" || echo "No changes"
           git push

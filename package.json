@@ -1,14 +1,16 @@
 {
-  "name": "nepali-date-bot",
+  "name": "nepali-date-api",
   "version": "1.0.0",
-  "description": "Auto-updates nepali date every 2hrs and commits date.json",
+  "description": "Public Nepali Date JSON API updated every 2 hours",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "generate": "node generator.js"
   },
   "dependencies": {
-    "nepali-date-converter": "^2.3.0",
     "axios": "^1.6.7",
-    "dayjs": "^1.11.10"
+    "dayjs": "^1.11.10",
+    "express": "^4.19.2",
+    "nepali-datetime": "^1.4.1"
   }
 }
