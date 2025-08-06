@@ -1,0 +1,14 @@
+{
+  "name": "nepali-date-bot",
+  "version": "1.0.0",
+  "description": "Auto-updates nepali date every 2hrs and commits date.json",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "nepali-date-converter": "^2.3.0",
+    "axios": "^1.6.7",
+    "dayjs": "^1.11.10"
+  }
+}
