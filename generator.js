@@ -5,7 +5,7 @@ const NepaliDate = require('nepali-datetime');
 const today = new Date();
 const bsDate = new NepaliDate(today);
 
-const bsDateStr = `${bsDate.getBSYear()}-${String(bsDate.getBSMonth() + 1).padStart(2, '0')}-${String(bsDate.getBSDay()).padStart(2, '0')}`;
+const bsDateStr = `${bsDate.year}-${String(bsDate.month + 1).padStart(2, '0')}-${String(bsDate.date).padStart(2, '0')}`;
 
 // Dummy festival & event data
 function getFestival(bsDateStr) {
